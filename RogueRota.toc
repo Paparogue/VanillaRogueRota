@@ -1,0 +1,7 @@
+## Interface: 11200
+## Title: |cFFFF8080Rogue|cFFFF1010Rota|r
+## Notes: One Button Rogue Rota
+## Author: AbusivePapi - Kronos3
+## Version: 2.0
+
+RogueRota.lua
