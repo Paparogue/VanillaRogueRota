@@ -150,7 +150,6 @@ end
 
 function RogueRotaAR()
 	local GCD = GetSpellCooldown(GCD_ID,"BOOKTYPE_SPELL");
-	printCounter = printCounter + 1;
 	if (GCD == 0) then
 		local _, va_cd = GetSpellCooldown(Vanish_ID,"BOOKTYPE_SPELL");
 		local tLevel = UnitLevel("target") or 0;
@@ -209,7 +208,7 @@ function RogueRotaAR()
 		if (dpsList > 0) then
 			targetDPS = (dpsList/currentFightTime);
 		else
-			targetDPS = 1; -- DEBUG
+			targetDPS = 1;
 		end
 		local attackFlag = TimeToAttack(mainHandAttackLeft, mainHandSpeed);
 		local fightTimeSeconds = (health/targetDPS);
