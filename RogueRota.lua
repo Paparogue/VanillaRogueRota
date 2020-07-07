@@ -12,7 +12,7 @@ frameEnergyObserver:RegisterEvent("UNIT_ENERGY");
 frameEnergyObserver:RegisterEvent("PLAYER_ENTERING_WORLD");
 	
 function TimeUntilNextEnergyTick()
-	return 2-math.mod((GetTime()-EnergyTickTime),2); -- überprüfem ob das immer funktioniert
+	return 2-math.mod((GetTime()-EnergyTickTime),2);
 end
 
 local function ComboToSND(cp)
@@ -244,11 +244,10 @@ frameEnergyObserver:SetScript("OnEvent", function()
 		Feint_ID = FindSpellID("Feint");
 		Vanish_ID = FindSpellID("Vanish");
 	end;
-	if event == "UNIT_ENERGY" and arg1 ~= nil and arg1 == "player" then -- LastTickEnergy muss geupdated werden wenn Talent proct oder Tier3 -- nach einem Tick ist es irrelevant wann der nächste Tick ist wir haben schon die Zeit
+	if event == "UNIT_ENERGY" and arg1 ~= nil and arg1 == "player" then
 		local energyGain = 20;
 		if (BuffInfo("Adrenaline Rush") == true) then energyGain = 2*energyGain; end
 		local ftrEnergy = LastTickEnergy+energyGain;
-		--if ftrEnergy > UnitManaMax("player") then ftrEnergy = UnitManaMax("player"); end
 		if (UnitMana("player") == ftrEnergy) then
 			EnergyTickTime = GetTime();
 		end
