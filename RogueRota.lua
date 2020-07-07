@@ -174,8 +174,8 @@ function RogueRotaAR()
 		local cmbPoints = GetComboPoints("player");
 		local tickRate = 20;
 		if (adrenaActive == true) then tickRate = tickRate*2; end
-		local health = MobHealth_GetTargetCurHP() or 999999; --- DEBUG
-		local healthMax = MobHealth_GetTargetMaxHP() or 999999; --- DEBUG
+		local health = MobHealth_GetTargetCurHP() or 999999;
+		local healthMax = MobHealth_GetTargetMaxHP() or 999999;
 		local mainHandAttackLeft = VGAB_MH_landsAt;
 		local mainHandSpeed = VGAB_MH_speed;
 		local _, _, latency = GetNetStats();
