@@ -211,10 +211,6 @@ function RogueRotaAR()
 		else
 			targetDPS = 1; -- DEBUG
 		end
-		if printCounter >= 100 then
-			print("FightTime: " .. tostring(ceil((health/targetDPS))) .. " - Total DPS: " .. tostring(targetDPS));
-			printCounter = 0;
-		end
 		local attackFlag = TimeToAttack(mainHandAttackLeft, mainHandSpeed);
 		local fightTimeSeconds = (health/targetDPS);
 		local perfectPredict = ((TicksToEnergy2(cEnergy,(evisAmount+40+sndAmount)))+(tPrediction*2));
